@@ -1,0 +1,22 @@
+<h3>Gerar Boleto.</h3>
+<div class="card">
+    <div class="card-body">
+    <form action="/api/gerarboletojuno" method="POST">
+        <p>Razão Social: <input type="text", name="razaosocial" class="form-control" placeholder="Razão Social"></p>
+        <p>Token: <input type="text", name="token" class="form-control" placeholder="Token"></p>
+        <p>CPF/CNPJ: <input type="text", name="cpfcnpj" class="form-control" placeholder="CPF/CNPJ (Somente Números)" required></p>
+        <p>E-mail: <input type="text", name="email" class="form-control" placeholder="E-mail de cobrança" required></p>
+        <p>Descrição: <input type="text", name="descricao" class="form-control" placeholder="Descrição" required></p>
+        <p>Valor:<input type="text", name="valor" class="form-control" placeholder="Valor da cobrança" required></p>
+        Tipo Pagamento
+        <div class="input-group mb-3">
+          <select class="custom-select" id="inputGroupSelect01" required>
+            <option value="BOLETO">Boleto Bancário</option>
+            <option value="CREDIT_CARD">Cartão de Crédito</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="w3-btn w3-blue w3-border w3-border-blue w3-round-large"><b>Gerar cobrança</b></button>
+    </form>
+    </div>
+</div>

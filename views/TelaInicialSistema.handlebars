@@ -1,0 +1,21 @@
+{{#each saldo}}
+
+<div class="container">
+  <h2>Saldo</h2>
+  <p>Balanco financeiro e valor transferível:</p>
+  <div class="d-flex p-2 bg-secondary text-white">  
+    <div class="p-3 bg-info">{{balance}}</div>
+    <div class="p-3 bg-primary">{{transferableBalance}}</div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-success">Valor dispível para transferencia:   {{balance}}</li>
+    <li class="list-group-item list-group-item-success">Valor dispível para transferencia:   {{createdAt}} <a href='/'>Refresh</a></li>
+  </ul>
+</div>
+
+{{/each}}

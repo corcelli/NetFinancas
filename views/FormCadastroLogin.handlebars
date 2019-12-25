@@ -1,0 +1,13 @@
+<h3>Cadastrar usuário.</h3>
+<div class="card">
+    <div class="card-body">
+    <form action="/cadastro/salvalogin" method="POST">
+        <p>Novo Login: <input type="text", name="login" class="form-control" placeholder="Nome do usuário"></p>
+        <p>Senha: <input type="password", name="senha" class="form-control" placeholder="Senha do usuário"></p>
+        <p>CPF/CNPJ: <input type="text", name="cpfcnpj" class="form-control" placeholder="CPF/CNPJ (Somente Números)"></p>
+        <p>E-mail: <input type="text", name="email" class="form-control" placeholder="E-mail de contato"></p>
+        <p>Observações: <textarea name="observacao" class="form-control" placeholder="Observações do usuário"></textarea></p>
+        <button type="submit" class="btn btn-lg btn-success">Cadastrar novo usuário</button>
+    </form>
+    </div>
+</div>

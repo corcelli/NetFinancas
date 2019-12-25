@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>NetExtreme</title>
+</head>
+<body>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+  <div class="w3-blue">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large"><font size=6><i class="fa fa-caret-left"></i></font></button>
+  <a href="/" class="w3-bar-item w3-button"><font size=6> <i class="fa fa-home"> </i></font> Inicio </a>
+  <a href="/cadastrarboletojuno" class="w3-bar-item w3-button"><font size=6><i class="fa fa-barcode"> </i></font> Boleto </a>
+  <a href="/cadastro/cadastrocliente" class="w3-bar-item w3-button"><font size=6><i class="fa fa-address-card"> </i></font> CLiente </a>
+  <a href="/listaclientes" class="w3-bar-item w3-button"><font size=6> <i class="fa fa-book"></i> </font> Listar CLientes </a>
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large"><font size=6><i class="fa fa-close"></i></font></button>
+  
+   </div>
+</div>
+
+
+<div class="w3-blue">
+  <button class="w3-button w3-blue w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+  <button class="w3-button w3-blue w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">NetExtreme</a>
+  <!-- Links -->
+  <ul class="navbar-nav container mt-0">
+    
+  
+  </ul>
+</nav>
+<br>
+
+
+    <div class="container mt-3">
+    {{{body}}}
+    </div>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  
+
+
+<script>$("#ModalLoginOK").modal()</script>
+<script>$("#ModalLoginOK2").modal()</script>
+<script>$("#ModalOperacaoEfetuada").modal()</script>
+
+
+
+
+
+
+     
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+</script>
+
+
+
+
+</body>
+</html>

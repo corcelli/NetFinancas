@@ -1,0 +1,52 @@
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="./js/epoch.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/epoch.min.css">
+
+<script>
+var barChartData = [
+  
+  {
+    label: 'Series 1',
+    values: [
+      { x: 'A', y: 30 },
+      { x: 'B', y: 10 },
+  
+ 
+    ]
+  },
+
+  // Second series
+  {
+    label: 'Series 2',
+    values: [
+      { x: 'A', y: 20 },
+      { x: 'B', y: 39 },
+  
+ 
+    ]
+  },
+
+{
+    label: 'Series 2',
+    values: [
+      { x: 'A', y: 20 },
+      { x: 'B', y: 39 },
+  
+ 
+    ]
+  },
+
+];
+
+</script>
+
+
+
+<div id="barChart" style="width: 400px; height: 200px" class="epoch category10"></div>
+<script>
+  $('#barChart').epoch({
+    type: 'bar',
+    data: barChartData
+  });
+</script>

@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="container mt-4">
+ <table class="w3-table-all">
+    <thead>
+      <tr>
+        <th><font size=5>Cliente</font></th>
+        <th><font size=5>CNPJ</font></th>
+    
+        <th><center></font></center></th>
+        </tr>
+    </thead>
+    <tbody>
+{{#each clientes}}
+<tr>
+    <td>
+      <font size=3><type="hidden" name="razaosocial" value="{{razaosocial}}">{{razaosocial}}</font>
+    </td>
+    <td>
+      <font size=3>{{cpfcnpj}}</font>
+    </td>
+      <td>
+          <center><div class="w3-container">
+            <div class="w3-dropdown-hover">
+              <button class="w3-button w3-blue">&#9776;</button>
+            <div class="w3-dropdown-content w3-bar-block w3-border">
+                <a href="#" class="w3-bar-item w3-button">Editar</a>
+                <a href="/deletar/deletacliente/{{id}}" class="w3-bar-item w3-button" value={{id}}>Excluir</a>
+                <a href="/api/gerarcobrancadadoscliente/{{id}}" class="w3-bar-item w3-button" value="{{id}}">Gerar Cobrança</a>
+              </div>
+            </div>
+          </div>
+          </center></a>
+    </td>
+    </td>
+    </li>
+  </ul>
+
+</tr>
+    </td>
+{{/each}}
+ </tbody>
+  </table>
+</div>

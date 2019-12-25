@@ -1,0 +1,15 @@
+<h3>Gerar Cobrança Cartão.</h3>
+<div class="card">
+    <div class="card-body">
+    <form action="/api/criarpagamentocartaojuno" method="POST">
+        <p>Razão Social: <input type="text", name="razaosocial" class="form-control" placeholder="Razão Social"></p>
+        <p>Token: <input type="text", name="token" class="form-control" placeholder="Token"></p>
+        <p>CPF/CNPJ: <input type="text", name="cpfcnpj" class="form-control" placeholder="CPF/CNPJ (Somente Números)"></p>
+        <p>E-mail: <input type="text", name="email" class="form-control" placeholder="E-mail de cobrança"></p>
+        <p>Descrição: <input type="text", name="descricao" class="form-control" placeholder="Descrição"></p>
+        <p>Valor:<input type="text", name="valor" class="form-control" placeholder="Valor da cobrança"></p>
+        <button type="submit" class="btn btn-danger">Gerar cobrança</button>
+        
+    </form>
+    </div>
+</div>

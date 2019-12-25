@@ -1,0 +1,15 @@
+<h3>Cadastro cliente.</h3>
+<div class="card">
+    <div class="card-body">
+    <form action="/cadastro/salvaclientemaiscontrato" method="POST" enctype="multipart/form-data">
+        <p>Razão Social: <input type="text", name="razaosocial" class="form-control" placeholder="Razão Social"></p>
+        <p>Nome Fantasia: <input type="text", name="nomefantasia" class="form-control" placeholder="Nome Fantasia"></p>
+        <p>CPF/CNPJ: <input type="text", name="cpfcnpj" class="form-control" placeholder="CPF/CNPJ (Somente Números)"></p>
+        <p>E-mail: <input type="text", name="email" class="form-control" placeholder="E-mail de cobrança"></p>
+        <p>Observações: <textarea name="observacao" class="form-control" placeholder="Observações do Cliente"></textarea></p>
+        Arquivo de Contrato:
+        <input class="form-control" type="file" name="myFile" /><P></P>
+        <button type="submit" class="w3-btn w3-blue w3-border w3-border-blue w3-round-large"><b>Cadastrar Cliente</b></button>
+    </form>
+    </div>
+</div>

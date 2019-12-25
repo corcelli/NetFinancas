@@ -1,0 +1,57 @@
+{{# cliente}}
+<div class="container mt-4">
+  <p></p>
+<div id="ModalOperacaoEfetuada" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body">
+        <P></P>
+        <h3>Cliente: {{razaosocial}}.</h3>
+<div class="card">
+    <div class="card-body">
+    <form action="/api/gerarboletojuno" method="POST">
+        <p>Razão Social: <input type="text", name="razaosocial" class="form-control" placeholder="Razão Social" value="{{razaosocial}}" readonly></p>
+        <p>CPF/CNPJ: <input type="text", name="cpfcnpj" class="form-control" placeholder="CPF/CNPJ (Somente Números)" value="{{cpfcnpj}}" readonly></p>
+        <p>E-mail: <input type="text", name="email" class="form-control" placeholder="E-mail de cobrança" value="{{email}}" readonly></p>
+        <p>Descrição: <input type="text", name="descricao" class="form-control" placeholder="Descrição" value="{{observacao}}" readonly></p>
+        <p>Valor:<input type="text", name="valor" class="form-control" placeholder="Valor da cobrança" value="{{valor}}" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div></p>
+        <div class="input-group mb-3">
+          <select class="custom-select" id="inputGroupSelect01">
+            <option selected>Tipo de pagamento</option>
+            <option value="BOLETO">Boleto Bancário</option>
+            <option value="CREDIT_CARD">Cartão de Crédito</option>
+          </select>
+        </div>
+        <p>Vencimento:<input type="text", name="datavencimento" class="form-control" placeholder="Data vencimento"
+        onkeyup="  
+        var v = this.value;  
+        if (v.match(/^\d{2}$/) !== null) {  
+            this.value = v + '/';  
+        } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {  
+            this.value = v + '/';  
+        }"  
+    maxlength="10" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div></p>
+        <button type="submit" class="w3-btn w3-blue w3-border w3-border-blue w3-round-large"><b>Gerar cobrança</b></button>
+        
+    </form>
+    </div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+{{/cliente}}
