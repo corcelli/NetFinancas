@@ -70,6 +70,7 @@ router.post('/salvaclientemaiscontrato',upload.single('myFile'),function(req, re
             cpfcnpj:    req.body.cpfcnpj,
             email: req.body.email,
             observacao: req.body.observacao,
+            datavencimentocontrato: req.body.datavencimentocontrato,
             nomearquivocontrato: req.file.filename
         });
   const file = req.file

@@ -19,6 +19,9 @@ const CadastroCliente = db.sequelize.define('cadastrocliente_', {
     nomearquivocontrato: {
         type: db.Sequelize.TEXT
     },
+    datavencimentocontrato: {
+        type: db.Sequelize.TEXT
+    },
     observacao: {
         type: db.Sequelize.TEXT
     }

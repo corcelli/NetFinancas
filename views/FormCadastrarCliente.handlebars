@@ -6,10 +6,23 @@
         <p>Nome Fantasia: <input type="text", name="nomefantasia" class="form-control" placeholder="Nome Fantasia"></p>
         <p>CPF/CNPJ: <input type="text", name="cpfcnpj" class="form-control" placeholder="CPF/CNPJ (Somente Números)"></p>
         <p>E-mail: <input type="text", name="email" class="form-control" placeholder="E-mail de cobrança"></p>
+        
+        <p>Data do vencimento do contrato:<input type="text", name="datavencimento" class="form-control" placeholder="Data vencimento"
+        onkeyup="  
+        var v = this.value;  
+        if (v.match(/^\d{2}$/) !== null) {  
+            this.value = v + '/';  
+        } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {  
+            this.value = v + '/';  
+        }"  
+    maxlength="10" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div></p>
+        
         <p>Observações: <textarea name="observacao" class="form-control" placeholder="Observações do Cliente"></textarea></p>
-        Arquivo de Contrato:
-        <input class="form-control" type="file" name="myFile" /><P></P>
-        <button type="submit" class="w3-btn w3-blue w3-border w3-border-blue w3-round-large"><b>Cadastrar Cliente</b></button>
+        Arquivo de Contrato:<br>
+        <input class="form-control" type="file" name="myFile" /><br>
+        <button type="submit" class="w3-btn w3-blue w3-border-blue w3-round-large"><b>Cadastrar Cliente</b></button>
     </form>
     </div>
 </div>
