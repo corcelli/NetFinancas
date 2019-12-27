@@ -23,6 +23,8 @@ const CadastroCliente = require('./models/CadastroCliente');
 const CadastroLogin = require('./models/CadastroLogin');
 const apicartaojuno = require('./routes/api_cartao_juno');
 const SaldoHistoricoJuno = require('./models/TB_SaldoHistoricoJuno');
+const downloads = require('./routes/downloads');
+const mostrarpdf = require('./routes/mostrar_pdf_navegador');
 //########//
 
 // set morgan to log info about our requests for development use.
@@ -82,9 +84,9 @@ app.use(express.static(path.join(__dirname,"public")));
 app.use('/api', apis);
 app.use('/cadastro', cadastro);
 app.use('/apiread', apis_ler_dados);
-//app.use('/api',apicartaojuno);
 app.use('/deletar', deletar);
-
+app.use('/downloads', downloads);
+app.use('/mostrarpdf', mostrarpdf);
 //Tela de Login.
 
 app.get('/', (req, res) => {

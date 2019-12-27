@@ -34,11 +34,11 @@ var upload = multer({ storage: storage })
 
 
 router.get('/cadastrologin', (req, res) => {
-    if (req.session.user && req.cookies.user_sid) {
+    //if (req.session.user && req.cookies.user_sid) {
         res.render('FormCadastroLogin');
-    } else {
-        res.redirect('/');
-    }
+    //} else {
+    //    res.redirect('/');
+//    }
 });
  
 router.get('/cadastrocliente', (req, res) => {
@@ -64,6 +64,7 @@ router.post('/salvacliente_',function(req, res){
 
 
 router.post('/salvaclientemaiscontrato',upload.single('myFile'),function(req, res,next){
+        console.log(req.body.datavencimentocontrato)
         SalvaCliente.create({
             razaosocial:   req.body.razaosocial,
             nomefantasia:    req.body.nomefantasia,
@@ -73,12 +74,12 @@ router.post('/salvaclientemaiscontrato',upload.single('myFile'),function(req, re
             datavencimentocontrato: req.body.datavencimentocontrato,
             nomearquivocontrato: req.file.filename
         });
-  const file = req.file
+    const file = req.file
   if (!file) {
     const error = new Error('Please upload a file')
     error.httpStatusCode = 400
     return next(error)
-  }
+  } 
     res.send(file)
  
         

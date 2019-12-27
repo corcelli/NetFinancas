@@ -1,4 +1,4 @@
-const db = require('./ConexaoBanco')
+const db = require('./ConexaoBanco');
 
 const CadastroCliente = db.sequelize.define('cadastrocliente_', {
     id: {
@@ -13,6 +13,12 @@ const CadastroCliente = db.sequelize.define('cadastrocliente_', {
     cpfcnpj: {
         type: db.Sequelize.TEXT
     },
+    telefone: {
+        type: db.Sequelize.TEXT
+    },
+    endereco: {
+        type: db.Sequelize.TEXT
+    },
     email: {
         type: db.Sequelize.TEXT
     },
@@ -20,17 +26,20 @@ const CadastroCliente = db.sequelize.define('cadastrocliente_', {
         type: db.Sequelize.TEXT
     },
     datavencimentocontrato: {
-        type: db.Sequelize.TEXT
+        type: db.Sequelize.DATEONLY,
+    },
+    datavencimentoboleto: {
+        type: db.Sequelize.DATEONLY,
     },
     observacao: {
         type: db.Sequelize.TEXT
     }
-})
+});
 
 //CadastroCliente.sync({force: true});
 CadastroCliente.sync()
     .then(() => console.log('users table has been successfully created, if one doesn\'t exist'))
     .catch(error => console.log('This error occured', error));
     
-module.exports = CadastroCliente
+module.exports = CadastroCliente;
 

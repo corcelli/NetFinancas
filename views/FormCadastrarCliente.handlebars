@@ -1,28 +1,49 @@
-<h3>Cadastro cliente.</h3>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<br>
+
 <div class="card">
-    <div class="card-body">
-    <form action="/cadastro/salvaclientemaiscontrato" method="POST" enctype="multipart/form-data">
-        <p>Razão Social: <input type="text", name="razaosocial" class="form-control" placeholder="Razão Social"></p>
-        <p>Nome Fantasia: <input type="text", name="nomefantasia" class="form-control" placeholder="Nome Fantasia"></p>
-        <p>CPF/CNPJ: <input type="text", name="cpfcnpj" class="form-control" placeholder="CPF/CNPJ (Somente Números)"></p>
-        <p>E-mail: <input type="text", name="email" class="form-control" placeholder="E-mail de cobrança"></p>
+    <div class="card-body-single">
+    <form action="/cadastro/salvaclientemaiscontrato" method="POST" enctype="multipart/form-data" class="w3-container w3-card-4">
+        <br>
+        <h3>Cadastro cliente</h3>
+        <br>
+        <p>Razão Social: <input type="text", name="razaosocial" class="form-control" placeholder="Razão Social" required></p>
+        <p>Nome Fantasia: <input type="text", name="nomefantasia" class="form-control" placeholder="Nome Fantasia" required></p>
+        <p>CPF/CNPJ: <input type="text", name="cpfcnpj" class="form-control" placeholder="CPF/CNPJ (Somente Números)" required></p>
+        <p>Telefone: <input type="text", name="telefone" class="form-control" placeholder="Telefone" required></p>
+        <p>E-mail: <input type="text", name="email" class="form-control" placeholder="E-mail de cobrança" required></p>
         
-        <p>Data do vencimento do contrato:<input type="text", name="datavencimento" class="form-control" placeholder="Data vencimento"
-        onkeyup="  
-        var v = this.value;  
-        if (v.match(/^\d{2}$/) !== null) {  
-            this.value = v + '/';  
-        } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {  
-            this.value = v + '/';  
-        }"  
-    maxlength="10" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div></p>
+        <table class="w3-striped">
+            <tbody>
+                <tr>
+                    <td>
+                        Vencimento do contrato:<input type="text", name="datavencimentocontrato" class="form-control" placeholder="Venc contrato" maxlength="10" id="datepicker" required>
+                    </td>
+                    <td>
+                        Vencimento do boleto:<input type="text", name="datavencimentoboleto" class="form-control" placeholder="Venc boleto" maxlength="10" id="datepicker2" required>
+                    </td>
+                    <td>
+                        Cobrança recorrente:<input class="w3-check" type="checkbox" checked="checked"><label>Sim</label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         
         <p>Observações: <textarea name="observacao" class="form-control" placeholder="Observações do Cliente"></textarea></p>
         Arquivo de Contrato:<br>
         <input class="form-control" type="file" name="myFile" /><br>
         <button type="submit" class="w3-btn w3-blue w3-border-blue w3-round-large"><b>Cadastrar Cliente</b></button>
+        <br><br>
     </form>
     </div>
 </div>
+
+
+ <script>
+  $( function() {
+    $( "#datepicker2" ).datepicker({
+      dateFormat: 'dd/mm/yy',                
+      language: 'pt-BR'
+    });
+  } );
+  </script>

@@ -22,7 +22,7 @@
       <font size=3>{{cpfcnpj}}</font>
     </td>
     <td>
-      <font size=3>{{nomearquivocontrato}}</font>
+      <a href='/downloads/pdf/{{nomearquivocontrato}}'><font size=3>{{nomearquivocontrato}}</font></a>
     </td>
     <td>
       <font size=3>{{datavencimentocontrato}}</font>
@@ -34,6 +34,8 @@
               <button class="w3-button w3-blue">&#9776;</button>
             <div class="w3-dropdown-content w3-bar-block w3-border">
                 <a href="#" class="w3-bar-item w3-button">Editar</a>
+                <a href="/mostrarpdf/pdf/{{nomearquivocontrato}}" class="w3-bar-item w3-button" value='nomearquivocontrato'>Mostrar Contrato</a>
+                <a href="/downloads/pdf/{{nomearquivocontrato}}" class="w3-bar-item w3-button" value='nomearquivocontrato'>Baixar Contrato</a>
                 <a href="/deletar/deletacliente/{{id}}" class="w3-bar-item w3-button" value={{id}}>Excluir</a>
                 <a href="/api/gerarcobrancadadoscliente/{{id}}" class="w3-bar-item w3-button" value="{{id}}">Gerar Cobrança</a>
               </div>
